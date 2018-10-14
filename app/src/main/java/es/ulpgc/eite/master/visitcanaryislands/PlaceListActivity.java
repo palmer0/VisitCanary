@@ -37,14 +37,14 @@ public class PlaceListActivity extends AppCompatActivity {
     }
 
     private void setupToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
     }
 
     private void setupRecyclerView() {
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.place_list);
+        RecyclerView recyclerView = findViewById(R.id.place_list);
         recyclerView.setAdapter(new PlaceRecyclerViewAdapter(placeStore.getPlaces()));
     }
 
@@ -79,15 +79,11 @@ public class PlaceListActivity extends AppCompatActivity {
             holder.placeItem = places.get(position);
             holder.placeTitleView.setText(places.get(position).title);
 
-            holder.placeView.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View view) {
-                    Context context = view.getContext();
-                    Intent intent = new Intent(context, PlaceDetailActivity.class);
-                    intent.putExtra(PlaceDetailActivity.PARAM_PLACE_ID, holder.placeItem.id);
-                    context.startActivity(intent);
-                }
+            holder.placeView.setOnClickListener(view -> {
+                Context context = view.getContext();
+                Intent intent = new Intent(context, PlaceDetailActivity.class);
+                intent.putExtra(PlaceDetailActivity.PARAM_PLACE_ID, holder.placeItem.id);
+                context.startActivity(intent);
             });
         }
 
