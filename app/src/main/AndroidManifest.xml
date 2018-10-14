@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="es.ulpgc.eite.master.visitcanaryislands">
+    package="es.ulpgc.eite.master.visitcanary">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".PlaceListActivity"
+            android:name="es.ulpgc.eite.master.visitcanary.PlaceListActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,13 +20,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PlaceDetailActivity"
+            android:name="es.ulpgc.eite.master.visitcanary.PlaceDetailActivity"
             android:label="@string/title_place_detail"
-            android:parentActivityName=".PlaceListActivity"
+            android:parentActivityName="es.ulpgc.eite.master.visitcanary.PlaceListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="es.ulpgc.eite.master.visitcanaryislands.PlaceListActivity" />
+                android:value="es.ulpgc.eite.master.visitcanary.PlaceListActivity" />
         </activity>
     </application>
 

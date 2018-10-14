@@ -1,4 +1,4 @@
-package es.ulpgc.eite.master.visitcanaryislands;
+package es.ulpgc.eite.master.visitcanary;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

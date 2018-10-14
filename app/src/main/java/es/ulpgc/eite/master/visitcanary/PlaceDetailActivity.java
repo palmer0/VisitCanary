@@ -1,4 +1,4 @@
-package es.ulpgc.eite.master.visitcanaryislands;
+package es.ulpgc.eite.master.visitcanary;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -36,13 +36,13 @@ public class PlaceDetailActivity extends AppCompatActivity {
         if (place != null) {
             setupToolbar(place.title);
 
-            TextView placeDetail = findViewById(R.id.place_detail);
-            placeDetail.setText(place.details);
             ImageView placePicture = findViewById(R.id.place_picture);
-
             int resId= getResources().getIdentifier(
                     place.picture, "drawable", getPackageName());
             placePicture.setImageResource(resId);
+
+            TextView placeDetail = findViewById(R.id.place_detail);
+            placeDetail.setText(place.details);
         }
     }
 

@@ -1,4 +1,4 @@
-package es.ulpgc.eite.master.visitcanaryislands;
+package es.ulpgc.eite.master.visitcanary;
 
 import java.util.ArrayList;
 import java.util.List;
