@@ -40,7 +40,6 @@ public class PlaceListActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
-        //toolbar.setTitle(getString(R.string.title_place_list));
     }
 
     private void setupRecyclerView() {
