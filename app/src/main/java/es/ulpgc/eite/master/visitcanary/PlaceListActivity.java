@@ -33,7 +33,7 @@ public class PlaceListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_place_list);
 
         setupToolbar();
-        setupRecyclerView();
+        setupAdapter();
     }
 
     private void setupToolbar() {
@@ -42,10 +42,10 @@ public class PlaceListActivity extends AppCompatActivity {
         toolbar.setTitle(getTitle());
     }
 
-    private void setupRecyclerView() {
+    private void setupAdapter() {
 
         RecyclerView recyclerView = findViewById(R.id.place_list);
-        recyclerView.setAdapter(new PlaceRecyclerViewAdapter(placeStore.getPlaces()));
+        recyclerView.setAdapter(new PlaceListAdapter(placeStore.getPlaces()));
     }
 
 
@@ -58,12 +58,12 @@ public class PlaceListActivity extends AppCompatActivity {
         placeStore = new PlaceStore(titles, details, pictures);
     }
 
-    class PlaceRecyclerViewAdapter
-            extends RecyclerView.Adapter<PlaceRecyclerViewAdapter.PlaceViewHolder> {
+    class PlaceListAdapter
+            extends RecyclerView.Adapter<PlaceListAdapter.PlaceViewHolder> {
 
         private List<PlaceStore.Place> places;
 
-        public PlaceRecyclerViewAdapter(List<PlaceStore.Place> places) {
+        public PlaceListAdapter(List<PlaceStore.Place> places) {
             this.places = places;
         }
 
