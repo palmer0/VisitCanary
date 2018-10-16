@@ -65,16 +65,4 @@ public class PlaceDetailActivity extends AppCompatActivity {
         }
     }
 
-    /*
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            //navigateUpTo(new Intent(this, PlaceListActivity.class));
-            //return true;
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
-    }
-    */
 }
